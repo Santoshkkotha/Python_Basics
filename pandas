@@ -1,0 +1,58 @@
+
+import os
+os.getcwd()
+os.chdir('C:\\Users\\Santosh\\Downloads')
+os.getcwd()
+temp_var=open("train.csv")
+temp_var.shape()
+
+
+
+import pandas as pd
+col1 = [10,20,30,40]
+col2 = ['abc','def','xyz','pqr']
+col3 = [0,1,0,1]
+df1 = pd.DataFrame({'pid':col1,'pname':col2,'survived':col3
+
+# ilocation and location are different
+df1.iloc[0:2,1] # ilocation - 0:2 mean from 0th row, upto 1st row -- ",1" mean pname 
+df1.loc[0:2,['pname']] #location - 0:2 mean from 0th row to 2nd row ------ ['pname'] mean pname columns
+
+
+print(df1.pid >20 )
+df1[df1.pid > 30]
+df1.pid   #displays complete column of that pid
+
+
+import pandas as pd
+print(pd.__version__)
+titanic_train = pd.read_csv("C:\\Users\\Santosh\\Downloads\\train.csv")
+t = titanic_train
+print(type(titanic_train))
+titanic_train.info()       #displays complete information like how many rows,cloumns, nullable & non-nullable values,
+titanic_train.describe() # displays count mean,std,min,max,25%,50% etc..
+titanic_train.shape        #displays rows and columns
+titanic_train.head()#displays first 5 rows i.e., from 0th index to 4th index
+titanic_train.tail()#displays last 5 rows 
+
+h=titanic_train.head()
+titanic_train.groupby(['Embarked', 'Pclass']). mean()['Fare']   
+titanic_train.groupby(['Pclass']).count()  #displays count
+titanic_train.head()
+h['Fare']  # same as head
+h.Fare #same as head
+
+
+
+
+
+dict1={'a':10,'b':20}
+dict2={'asdf':';lkj','10':'10'}
+type(dict1)
+print(dict1['a'])
+print(dict1.get('a'))
+print(dict2.keys())
+print(dict2.items())
+print(dict1.keys())
+print(dict1.items())
+
