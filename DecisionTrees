@@ -1,0 +1,33 @@
+from sklearn import tree # for decision tree
+#import io
+
+t.shape
+x_t1 = t[['Pclass','SibSp','Parch']]
+y_t1 = t['Survived']
+dt = tree.DecisionTreeClassifier()
+dt.fit(x_t1,y_t1)
+
+
+#t_test = pd.read_csv("C:\\Users\\Santosh\\Downloads\\titanic_test.csv")
+#X_test = t_test[['Pclass', 'SibSp', 'Parch']]
+#Use .predict method on Test data using the model which we built
+
+#t_test['Survived'] = dt.predict(X_test)  
+#os.getcwd() #To get current working directory
+#t_test.to_csv("submission_Index_True.csv", columns=['PassengerId','Survived'] , index = True)
+
+import os
+import io
+import pydot
+data = io.StringIO()
+tree.export_graphviz(dt, out_file = data, feature_names = x_t1.columns)
+file1 = pydot.graph_from_dot_data(data.getvalue())
+os.getcwd()
+os.chdir("C:\\Users\\Santosh\\Datascience\\")
+file1.write_pdf("DecissionTree1.pdf")
+
+
+
+
+
+
