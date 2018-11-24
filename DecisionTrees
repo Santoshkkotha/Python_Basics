@@ -16,6 +16,7 @@ dt.fit(x_t1,y_t1)
 #os.getcwd() #To get current working directory
 #t_test.to_csv("submission_Index_True.csv", columns=['PassengerId','Survived'] , index = True)
 
+#The below code is to visualize decision tree.
 import os
 import io
 import pydot
