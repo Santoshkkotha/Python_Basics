@@ -61,7 +61,19 @@ print(test.items())
 print(test.keys())
 
 
+i=10
+str1="python"
+l1=list(str1)
+l1[0]="j"
+print(str1)
+str1="0".join(l1)
+print(str1)
 
+sentence = 'Python prog'
+
+# Substring is searched in 'Python Prog.' next is starting position, then it looks for ending position
+# by default it looks from starting pos to ending position
+print(sentence.index('on',1))
 
 
 
